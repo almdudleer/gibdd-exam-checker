@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "Gibdd exam checker",
+	"description": "Plays sound when first date on http://gibddexam.artemiev.info is changed",
+	"version": "0",
+	"author": "Almdudleer",
+
+	"icons": {
+		"16": "images/icons/16.png",
+		"19": "images/icons/19.png",
+		"38": "images/icons/38.png",
+		"64": "images/icons/64.png",
+		"128": "images/icons/128.png"
+	},
+
+	"web_accessible_resources": [
+		"note.mp3"
+	],
+	
+	"permissions": [
+        "storage"
+    ],
+
+	"content_scripts": [
+		{
+			"matches": ["http://gibddexam.artemiev.info/"],
+			"js": ["cont.js"]
+		}
+	]
+}
